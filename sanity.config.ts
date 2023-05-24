@@ -16,7 +16,7 @@ export default defineConfig({
   name: 'default',
   title: 'Sanity + Shopify demo',
 
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'g2b4qblu',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'pzu39djh',
   dataset: process.env.SANITY_STUDIO_PROJECT_DATASET || 'production',
 
   plugins: [
