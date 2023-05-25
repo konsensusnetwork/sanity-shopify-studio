@@ -23,10 +23,10 @@ export default defineField({
         ],
         annotations: [
           // product
-          {
+/*           {
             name: 'annotationProduct',
             type: 'annotationProduct',
-          },
+          }, */
           // Email
           {
             name: 'annotationLinkEmail',
@@ -48,7 +48,8 @@ export default defineField({
       type: 'block',
     },
     // Custom blocks
-    {
+    // TODO: Implement the modules in the Remix Sanity + Shopify starter
+    /* {
       type: 'module.accordion',
     },
     {
@@ -65,6 +66,6 @@ export default defineField({
     },
     {
       type: 'module.products',
-    },
+    }, */
   ],
 })
