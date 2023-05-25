@@ -15,10 +15,13 @@ const annotations = [
 import collection from './documents/collection'
 import colorTheme from './documents/colorTheme'
 import page from './documents/page'
+import post from './documents/post'
 import product from './documents/product'
 import productVariant from './documents/productVariant'
+import author from './documents/author'
+import category from './documents/category'
 
-const documents = [collection, colorTheme, page, product, productVariant]
+const documents = [collection, colorTheme, page, post, product, productVariant, author, category]
 
 // Singleton document types
 import footer from './singletons/footer'
@@ -32,8 +35,9 @@ const singletons = [footer, home, links, menu, seo, settings]
 
 // Block content
 import body from './blocks/body'
+import postBody from './blocks/postBody'
 
-const blocks = [body]
+const blocks = [body, postBody]
 
 // Object types
 import customProductOptionColor from './objects/customProductOption/color'

@@ -6,8 +6,11 @@ import collections from './collectionStructure'
 import colorThemes from './colorThemeStructure'
 import home from './homeStructure'
 import pages from './pageStructure'
+import posts from './postStructure'
 import products from './productStructure'
 import settings from './settingStructure'
+import authors from './authorStructure'
+import categories from './categoryStructure'
 
 /**
  * Desk structure overrides
@@ -36,9 +39,12 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
     'home',
     'media.tag',
     'page',
+    'post',
     'product',
     'productVariant',
     'settings',
+    'author',
+    'category',
   ].includes(id)
 }
 
@@ -48,6 +54,10 @@ export const structure: StructureResolver = (S, context) =>
     .items([
       home(S, context),
       pages(S, context),
+      S.divider(),
+      posts(S, context),
+      authors(S, context),
+      categories(S, context),
       S.divider(),
       collections(S, context),
       products(S, context),
