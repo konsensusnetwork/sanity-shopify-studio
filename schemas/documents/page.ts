@@ -10,10 +10,6 @@ export default defineField({
   icon: DocumentIcon,
   groups: [
     {
-      name: 'theme',
-      title: 'Theme',
-    },
-    {
       default: true,
       name: 'editorial',
       title: 'Editorial',
@@ -38,14 +34,6 @@ export default defineField({
       options: {source: 'title'},
       // @ts-ignore - TODO - fix this TS error
       validation: validateSlug,
-    }),
-    // Color theme
-    defineField({
-      name: 'colorTheme',
-      title: 'Color theme',
-      type: 'reference',
-      to: [{type: 'colorTheme'}],
-      group: 'theme',
     }),
     // Show hero
     defineField({
@@ -77,6 +65,7 @@ export default defineField({
       title: 'SEO',
       type: 'seo.page',
       group: 'seo',
+      validation: (Rule) => Rule.required(),
     }),
   ],
   preview: {
