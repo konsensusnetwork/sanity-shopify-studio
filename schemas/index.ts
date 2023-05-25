@@ -35,9 +35,8 @@ const singletons = [footer, home, links, menu, seo, settings]
 
 // Block content
 import body from './blocks/body'
-import postBody from './blocks/postBody'
 
-const blocks = [body, postBody]
+const blocks = [body]
 
 // Object types
 import customProductOptionColor from './objects/customProductOption/color'
