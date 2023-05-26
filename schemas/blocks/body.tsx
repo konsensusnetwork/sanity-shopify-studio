@@ -48,6 +48,9 @@ export default defineField({
       type: 'block',
     },
     // Custom blocks
+    {
+      type: 'module.images',
+    }
     // TODO: Implement the modules in the Remix Sanity + Shopify starter
     /* {
       type: 'module.accordion',

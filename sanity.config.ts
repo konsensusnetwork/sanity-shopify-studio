@@ -13,8 +13,8 @@ import {customDocumentActions} from './plugins/customDocumentActions'
 const devOnlyPlugins = [visionTool()]
 
 export default defineConfig({
-  name: 'default',
-  title: 'Sanity + Shopify demo',
+  name: 'konsensus-network',
+  title: 'Konsensus Network',
 
   projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'pzu39djh',
   dataset: process.env.SANITY_STUDIO_PROJECT_DATASET || 'production',
