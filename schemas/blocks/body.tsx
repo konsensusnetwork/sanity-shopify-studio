@@ -6,6 +6,20 @@ export default defineField({
   type: 'array',
   of: [
     {
+      title: 'Block',
+      type: 'block',
+      // Styles let you set what your user can mark up blocks with. These
+      // correspond with HTML tags, but you can set any title or value
+      // you want and decide how you want to deal with it where you want to
+      // use your content.
+      styles: [
+        {title: 'Normal', value: 'normal'},
+        {title: 'H1', value: 'h1'},
+        {title: 'H2', value: 'h2'},
+        {title: 'H3', value: 'h3'},
+        {title: 'H4', value: 'h4'},
+        {title: 'Quote', value: 'blockquote'},
+      ],
       lists: [
         {title: 'Bullet', value: 'bullet'},
         {title: 'Numbered', value: 'number'},
@@ -21,38 +35,59 @@ export default defineField({
             value: 'strong',
           },
         ],
+        // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
-          // product
-/*           {
-            name: 'annotationProduct',
-            type: 'annotationProduct',
-          }, */
-          // Email
           {
-            name: 'annotationLinkEmail',
-            type: 'annotationLinkEmail',
+            title: 'Internal Link',
+            name: 'internalLink',
+            type: 'object',
+            fields: [
+              {
+                title: 'Reference',
+                name: 'reference',
+                type: 'reference',
+                to: [
+                  {type: 'page'},
+                  {type: 'product'},
+                  {type: 'collection'},
+                  {type: 'post'},
+                ]
+              },
+            ],
           },
-          // Internal link
           {
-            name: 'annotationLinkInternal',
-            type: 'annotationLinkInternal',
-          },
-          // URL
-          {
-            name: 'annotationLinkExternal',
-            type: 'annotationLinkExternal',
+            title: 'External link',
+            name: 'externalLink',
+            type: 'object',
+            fields: [
+              {
+                title: 'External Link',
+                name: 'href',
+                type: 'url',
+              },
+              {
+                title: 'Open in new tab',
+                name: 'blank',
+                description: 'Read https://css-tricks.com/use-target_blank/',
+                type: 'boolean'
+              }
+            ]
           },
         ],
       },
-      // Paragraphs
-      type: 'block',
     },
-    // Custom blocks
+    // You can add additional types here. Note that you can't use
+    // primitive types such as 'string' and 'number' in the same array
+    // as a block type.
     {
-      type: 'module.images',
+      type: 'image',
+      options: {hotspot: true},
+    },
+    /* 
+    {
+      type: 'module.image',
     }
-    // TODO: Implement the modules in the Remix Sanity + Shopify starter
-    /* {
+    {
       type: 'module.accordion',
     },
     {
@@ -69,6 +104,7 @@ export default defineField({
     },
     {
       type: 'module.products',
-    }, */
+    }, 
+    */
   ],
 })
