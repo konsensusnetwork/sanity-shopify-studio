@@ -36,14 +36,14 @@ export default defineField({
       validation: validateSlug,
     }),
     // Show hero
-    defineField({
+/*     defineField({
       name: 'showHero',
       title: 'Show hero',
       type: 'boolean',
       description: 'If disabled, page title will be displayed instead',
       initialValue: false,
       group: 'editorial',
-    }),
+    }), */
     // Hero
     defineField({
       name: 'hero',

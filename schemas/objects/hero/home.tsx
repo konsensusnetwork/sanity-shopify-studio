@@ -13,15 +13,15 @@ export default defineField({
       rows: 3,
     }),
     // Link
-    defineField({
+/*     defineField({
       name: 'links',
       title: 'Link',
       type: 'array',
       of: [{type: 'linkInternal'}, {type: 'linkExternal'}],
       validation: (Rule) => Rule.max(1),
-    }),
+    }), */
     // Content
-    defineField({
+    /* defineField({
       name: 'content',
       title: 'Content',
       type: 'array',
@@ -38,6 +38,6 @@ export default defineField({
           type: 'imageWithProductHotspots',
         },
       ],
-    }),
+    }), */
   ],
 })

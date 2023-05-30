@@ -44,7 +44,7 @@ export default defineType({
       type: 'footerSettings',
     }),
     // Custom product options
-    defineField({
+    /* defineField({
       name: 'customProductOptions',
       title: 'Custom product options',
       type: 'array',
@@ -70,7 +70,7 @@ export default defineType({
           }
           return true
         }),
-    }),
+    }), */
     // Not found page
     defineField({
       name: 'notFoundPage',

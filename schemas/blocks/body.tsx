@@ -1,4 +1,5 @@
 import {defineField} from 'sanity'
+import {LinkIcon, EarthGlobeIcon} from '@sanity/icons'
 
 export default defineField({
   name: 'body',
@@ -41,6 +42,7 @@ export default defineField({
             title: 'Internal Link',
             name: 'internalLink',
             type: 'object',
+            icon: LinkIcon,
             fields: [
               {
                 title: 'Reference',
@@ -59,6 +61,7 @@ export default defineField({
             title: 'External link',
             name: 'externalLink',
             type: 'object',
+            icon: EarthGlobeIcon,
             fields: [
               {
                 title: 'External Link',

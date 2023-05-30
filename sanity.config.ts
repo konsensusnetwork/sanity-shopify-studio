@@ -9,6 +9,7 @@ import {colorInput} from '@sanity/color-input'
 import {imageHotspotArrayPlugin} from 'sanity-plugin-hotspot-array'
 import {media, mediaAssetSource} from 'sanity-plugin-media'
 import {customDocumentActions} from './plugins/customDocumentActions'
+import { unsplashImageAsset, unsplashAssetSource } from 'sanity-plugin-asset-source-unsplash'
 
 const devOnlyPlugins = [visionTool()]
 
@@ -25,6 +26,7 @@ export default defineConfig({
     imageHotspotArrayPlugin(),
     customDocumentActions(),
     media(),
+    unsplashImageAsset(),
     ...(isDev ? devOnlyPlugins : []),
   ],
 
@@ -40,7 +42,7 @@ export default defineConfig({
     },
     image: {
       assetSources: (previousAssetSources) => {
-        return previousAssetSources.filter((assetSource) => assetSource === mediaAssetSource)
+        return previousAssetSources.filter((assetSource) => assetSource === mediaAssetSource || assetSource === unsplashAssetSource)
       },
     },
   },

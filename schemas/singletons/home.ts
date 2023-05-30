@@ -28,7 +28,7 @@ export default defineField({
       group: 'editorial',
     }),
     // Modules
-    defineField({
+    /* defineField({
       name: 'modules',
       title: 'Modules',
       type: 'array',
@@ -41,7 +41,7 @@ export default defineField({
         {type: 'module.product'},
       ],
       group: 'editorial',
-    }),
+    }), */
     // SEO
     defineField({
       name: 'seo',
