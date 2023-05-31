@@ -32,11 +32,11 @@ export default defineField({
       ],
     }),
     // Color theme
-    defineField({
+/*     defineField({
       name: 'colorTheme',
       title: 'Color theme',
       type: 'reference',
       to: [{type: 'colorTheme'}],
-    }),
+    }), */
   ],
 })

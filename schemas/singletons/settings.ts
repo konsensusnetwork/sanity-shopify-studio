@@ -38,11 +38,11 @@ export default defineType({
       type: 'menuSettings',
     }),
     // Footer
-    defineField({
+/*     defineField({
       name: 'footer',
       title: 'Footer',
       type: 'footerSettings',
-    }),
+    }), */
     // Custom product options
     /* defineField({
       name: 'customProductOptions',
