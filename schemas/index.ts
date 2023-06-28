@@ -62,6 +62,7 @@ import moduleCallToAction from './objects/module/callToAction'
 import moduleCollection from './objects/module/collection'
 import moduleGrid from './objects/module/grid'
 import gridItems from './objects/module/gridItems'
+import moduleButton from './objects/module/button'
 import moduleImage from './objects/module/image'
 import moduleImageAction from './objects/module/imageCallToAction'
 import moduleImages from './objects/module/images'
@@ -103,6 +104,7 @@ const objects = [
   heroCollection,
   heroHome,
   heroPage,
+  moduleButton,
   moduleAccordion,
   accordionBody,
   accordionGroup,

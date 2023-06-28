@@ -86,6 +86,9 @@ export default defineField({
       type: 'image',
       options: {hotspot: true},
     },
+    {
+      type: 'module.button'
+    }
     /* 
     {
       type: 'module.image',
